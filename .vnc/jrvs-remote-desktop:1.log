@@ -1,0 +1,317 @@
+
+Xvnc TigerVNC 1.15.0 - built Oct 31 2025 00:00:00
+Copyright (C) 1999-2025 TigerVNC team and many others (see README.rst)
+See https://www.tigervnc.org for information on TigerVNC.
+Underlying X server release 12011000
+
+Could not find any render nodes
+Failed to initialize DRI3 extension
+
+Mon Mar 30 16:11:19 2026
+ vncext:      VNC extension running!
+ vncext:      Listening for VNC connections on all interface(s), port 5901
+ vncext:      Created VNC server for screen 0
+/usr/bin/startxfce4: X server already running on display :1
+/usr/bin/iceauth:  creating new authority file /run/user/1000/ICEauthority
+dbus-update-activation-environment: warning: error sending to systemd: org.freedesktop.DBus.Error.Spawn.ChildExited: Process org.freedesktop.systemd1 exited with status 1
+
+(xfwm4:1615): xfwm4-WARNING **: 16:11:23.706: Unsupported GL renderer (llvmpipe (LLVM 20.1.8, 256 bits)).
+Xlib:  extension "DPMS" missing on display ":1.0".
+
+(xfce4-power-manager:1936): xfce4-power-manager-WARNING **: 16:11:26.377: Monitor is not DPMS capable
+
+(xfce4-power-manager:1936): libnotify-WARNING **: 16:11:26.390: Failed to connect to proxy
+
+(wrapper-2.0:1941): libnotify-WARNING **: 16:11:28.779: Failed to connect to proxy
+
+(xfce4-power-manager:1936): xfce4-power-manager-WARNING **: 16:11:28.804: could not map keysym 1008ffa8 to keycode
+
+
+** (wrapper-2.0:1944): WARNING **: 16:11:28.897: No outputs have backlight property
+
+(xfce4-power-manager:1936): xfce4-power-manager-WARNING **: 16:11:28.954: Unable to inhibit systemd sleep: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: Permission denied
+
+** (xfce4-power-manager:1936): WARNING **: 16:11:28.955: No outputs have backlight property
+
+(xfce4-power-manager:1936): xfce4-power-manager-WARNING **: 16:11:28.964: Failed to get keyboard max brightness level : GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.UPower.KbdBacklight” on object at path /org/freedesktop/UPower/KbdBacklight
+
+(wrapper-2.0:1944): Gtk-CRITICAL **: 16:11:29.168: gtk_icon_theme_has_icon: assertion 'icon_name != NULL' failed
+
+(wrapper-2.0:1944): Gtk-CRITICAL **: 16:11:29.172: gtk_icon_theme_has_icon: assertion 'icon_name != NULL' failed
+
+(wrapper-2.0:1944): Gtk-CRITICAL **: 16:11:29.172: gtk_icon_theme_has_icon: assertion 'icon_name != NULL' failed
+
+(wrapper-2.0:1944): Gtk-CRITICAL **: 16:11:29.346: gtk_icon_theme_has_icon: assertion 'icon_name != NULL' failed
+
+** (xfdesktop:1898): WARNING **: 16:11:29.776: Failed to register the newly set background with AccountsService '/usr/share/backgrounds/xfce/xfce-shapes.svg': GDBus.Error:org.freedesktop.DBus.Error.InvalidArgs: No such interface “org.freedesktop.DisplayManager.AccountsService”
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+
+Mon Mar 30 16:13:46 2026
+ Connections: Accepted: 76.9.192.46::62250
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+Xlib:  extension "DPMS" missing on display ":1.0".
+
+Mon Mar 30 16:14:08 2026
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 6 (8bpp) rgb222
+ VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian rgb888
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+
+** (xfce4-screensaver-dialog:2598): WARNING **: 16:19:43.137: Could not load user avatar: Failed to open file “/home/rocky/.face”: No such file or directory
+
+** (xfce4-screensaver-dialog:2598): WARNING **: 16:19:43.138: Could not load the user avatar: Failed to open file “/home/rocky/.face”: No such file or directory
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+
+Mon Mar 30 16:42:46 2026
+ Connections: Accepted: 71.6.199.23::43734
+ VNCSConnST:  Closing 71.6.199.23::43734: Reading version failed, not an RFB
+              client?
+ EncodeManager: Framebuffer updates: 0
+ EncodeManager:   Total: 0 rects, 0 pixels
+ EncodeManager:          0 B (1:-nan ratio)
+ Connections: Closed: 71.6.199.23::43734
+ ComparingUpdateTracker: 245.335 Mpixels in / 25.2169 Mpixels out
+ ComparingUpdateTracker: (1:9.72896 ratio)
+ Connections: Accepted: 71.6.199.23::43846
+ VNCSConnST:  Closing 71.6.199.23::43846: Reading version failed, not an RFB
+              client?
+ EncodeManager: Framebuffer updates: 0
+ EncodeManager:   Total: 0 rects, 0 pixels
+ EncodeManager:          0 B (1:-nan ratio)
+ Connections: Closed: 71.6.199.23::43846
+ ComparingUpdateTracker: 0 pixels in / 0 pixels out
+ ComparingUpdateTracker: (1:-nan ratio)
+ Connections: Accepted: 71.6.199.23::44604
+ SConnection: Client needs protocol version 3.8
+
+Mon Mar 30 16:42:47 2026
+ VNCSConnST:  Closing 71.6.199.23::44604: Clean disconnection
+ EncodeManager: Framebuffer updates: 0
+ EncodeManager:   Total: 0 rects, 0 pixels
+ EncodeManager:          0 B (1:-nan ratio)
+ Connections: Closed: 71.6.199.23::44604
+ ComparingUpdateTracker: 0 pixels in / 0 pixels out
+ ComparingUpdateTracker: (1:-nan ratio)
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+
+** (xfce4-screensaver-dialog:3358): WARNING **: 16:48:20.218: Could not load user avatar: Failed to open file “/home/rocky/.face”: No such file or directory
+
+** (xfce4-screensaver-dialog:3358): WARNING **: 16:48:20.218: Could not load the user avatar: Failed to open file “/home/rocky/.face”: No such file or directory
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+
+** (xfce4-screensaver-dialog:3449): WARNING **: 16:52:05.441: Could not load user avatar: Failed to open file “/home/rocky/.face”: No such file or directory
+
+** (xfce4-screensaver-dialog:3449): WARNING **: 16:52:05.441: Could not load the user avatar: Failed to open file “/home/rocky/.face”: No such file or directory
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+
+(tracker-miner-fs-3:1926): GLib-CRITICAL **: 16:55:07.699: g_hash_table_contains: assertion 'hash_table != NULL' failed
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
+Xlib:  extension "DPMS" missing on display ":1.0".
