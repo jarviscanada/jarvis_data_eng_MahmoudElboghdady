@@ -5,11 +5,28 @@
 This project is a structured set of SQL exercises built on top of a PostgreSQL
 database representing a fictional sports club. The database tracks members,
 facility bookings, and facility details across three related tables. I worked
-through queries covering everything from basic filtering and UNION operations to
-multi-table joins, aggregation with GROUP BY and HAVING, window functions, and
-string manipulation. The setup runs on a Rocky Linux 9 GCP instance with
-PostgreSQL inside a Docker container. I used DBeaver as my SQL IDE and managed
-all the work through Git with a Gitflow branching strategy.
+through queries covering everything from basic filtering and UNION operations
+to multi-table joins, self-joins, aggregation with GROUP BY and HAVING, window
+functions, and string manipulation. The setup runs on a Rocky Linux 9 GCP
+instance with PostgreSQL inside a Docker container. I used DBeaver as my SQL
+IDE and managed all the work through Git with a Gitflow branching strategy.
+
+## Quick Start
+
+```bash
+# Pull the PostgreSQL image and start a container
+docker pull postgres
+docker run --name sql-exercises \
+  -e POSTGRES_PASSWORD=password \
+  -p 5432:5432 -d postgres
+
+# Load the sample data
+psql -h localhost -U postgres -f sql/clubdata.sql -d postgres -x -q
+
+# Connect and verify
+psql -h localhost -p 5432 -U postgres -d exercises
+\dt cd.*
+```
 
 ---
 
@@ -79,20 +96,21 @@ SELECT
   'Spa', 20, 30, 100000, 800;
 ```
 
-**Question 3: Update a member's telephone number**
-
-```sql
-UPDATE cd.members
-SET telephone = '(555) 555-5555'
-WHERE memid = 0;
-```
-
-**Question 4: Increase guest cost for tennis courts by 10%**
+**Question 3: Fix the initial outlay for the second tennis court**
 
 ```sql
 UPDATE cd.facilities
-SET guestcost = guestcost * 1.1
-WHERE facid IN (0, 1);
+SET initialoutlay = 10000
+WHERE facid = 1;
+```
+
+**Question 4: Increase second tennis court costs by 10% based on first court**
+
+```sql
+UPDATE cd.facilities
+SET membercost = (SELECT membercost * 1.1 FROM cd.facilities WHERE facid = 0),
+    guestcost  = (SELECT guestcost  * 1.1 FROM cd.facilities WHERE facid = 0)
+WHERE facid = 1;
 ```
 
 **Question 5: Delete all bookings**
@@ -175,44 +193,34 @@ SELECT name FROM cd.facilities;
 
 ### Joins
 
-**Question 1: Members who booked a tennis court**
+**Question 1: Start times for bookings by David Farrell**
 
 ```sql
 SELECT
-  mems.firstname,
-  mems.surname,
-  facs.name AS facility
+  bks.starttime
 FROM
-  cd.members mems
-  JOIN cd.bookings bks ON mems.memid = bks.memid
-  JOIN cd.facilities facs ON bks.facid = facs.facid
+  cd.bookings bks
+  JOIN cd.members mems ON mems.memid = bks.memid
 WHERE
-  facs.name IN ('Tennis Court 1', 'Tennis Court 2');
+  mems.firstname = 'David'
+  AND mems.surname = 'Farrell';
 ```
 
-**Question 2: Bookings on 2012-09-14 with total cost over 30**
+**Question 2: Start times for tennis court bookings on 2012-09-21**
 
 ```sql
 SELECT
-  mems.firstname || ' ' || mems.surname AS member,
-  facs.name AS facility,
-  CASE
-    WHEN mems.memid = 0 THEN bks.slots * facs.guestcost
-    ELSE bks.slots * facs.membercost
-  END AS cost
+  bks.starttime AS start,
+  facs.name
 FROM
-  cd.members mems
-  JOIN cd.bookings bks ON mems.memid = bks.memid
-  JOIN cd.facilities facs ON bks.facid = facs.facid
+  cd.bookings bks
+  JOIN cd.facilities facs ON facs.facid = bks.facid
 WHERE
-  bks.starttime >= '2012-09-14'
-  AND bks.starttime < '2012-09-15'
-  AND (
-    (mems.memid = 0 AND bks.slots * facs.guestcost > 30)
-    OR (mems.memid != 0 AND bks.slots * facs.membercost > 30)
-  )
+  facs.name IN ('Tennis Court 1', 'Tennis Court 2')
+  AND bks.starttime >= '2012-09-21'
+  AND bks.starttime < '2012-09-22'
 ORDER BY
-  cost DESC;
+  bks.starttime;
 ```
 
 **Question 3: Each member with their recommender using a self-join**
@@ -295,26 +303,24 @@ ORDER BY
   facid;
 ```
 
-**Question 3: Total slots per facility per month in 2012**
+**Question 3: Total slots per facility in September 2012**
 
 ```sql
 SELECT
   facid,
-  EXTRACT(MONTH FROM starttime) AS month,
   SUM(slots) AS "Total Slots"
 FROM
   cd.bookings
 WHERE
-  EXTRACT(YEAR FROM starttime) = 2012
+  starttime >= '2012-09-01'
+  AND starttime < '2012-10-01'
 GROUP BY
-  facid,
-  month
+  facid
 ORDER BY
-  facid,
-  month;
+  SUM(slots);
 ```
 
-**Question 4: Total slots per facility and month (multi-column group by)**
+**Question 4: Total slots per facility per month in 2012**
 
 ```sql
 SELECT
@@ -343,34 +349,32 @@ FROM
   cd.bookings;
 ```
 
-**Question 6: Members with 3 or more tennis court bookings**
+**Question 6: Each member's name, id, and first booking after 2012-09-01**
 
 ```sql
 SELECT
-  mems.firstname || ' ' || mems.surname AS member,
-  facs.name AS facility,
-  COUNT(*) AS times
+  mems.surname,
+  mems.firstname,
+  mems.memid,
+  MIN(bks.starttime) AS starttime
 FROM
   cd.members mems
   JOIN cd.bookings bks ON mems.memid = bks.memid
-  JOIN cd.facilities facs ON bks.facid = facs.facid
 WHERE
-  facs.name IN ('Tennis Court 1', 'Tennis Court 2')
+  bks.starttime >= '2012-09-01'
 GROUP BY
-  member,
-  facility
-HAVING
-  COUNT(*) >= 3
+  mems.surname,
+  mems.firstname,
+  mems.memid
 ORDER BY
-  member,
-  facility;
+  mems.memid;
 ```
 
-**Question 7: Running total of members using a window function**
+**Question 7: Total member count in every row using a window function**
 
 ```sql
 SELECT
-  COUNT(*) OVER (ORDER BY joindate) AS count,
+  COUNT(*) OVER () AS count,
   firstname,
   surname
 FROM
@@ -379,7 +383,7 @@ ORDER BY
   joindate;
 ```
 
-**Question 8: Row number per member ordered by join date**
+**Question 8: Monotonically increasing row number ordered by join date**
 
 ```sql
 SELECT
@@ -392,25 +396,24 @@ ORDER BY
   joindate;
 ```
 
-**Question 9: Top 3 facilities by total revenue**
+**Question 9: Facility with the highest number of slots booked, including ties**
 
 ```sql
 SELECT
-  facs.name,
-  SUM(
-    CASE
-      WHEN bks.memid = 0 THEN bks.slots * facs.guestcost
-      ELSE bks.slots * facs.membercost
-    END
-  ) AS revenue
-FROM
-  cd.bookings bks
-  JOIN cd.facilities facs ON bks.facid = facs.facid
-GROUP BY
-  facs.name
-ORDER BY
-  revenue DESC
-LIMIT 3;
+  facid,
+  total
+FROM (
+  SELECT
+    facid,
+    SUM(slots) AS total,
+    RANK() OVER (ORDER BY SUM(slots) DESC) AS rank
+  FROM
+    cd.bookings
+  GROUP BY
+    facid
+) ranked
+WHERE
+  rank = 1;
 ```
 
 ---
@@ -426,15 +429,18 @@ FROM
   cd.members;
 ```
 
-**Question 2: Members whose surname starts with a vowel**
+**Question 2: Members with parentheses in their telephone number**
 
 ```sql
 SELECT
-  *
+  memid,
+  telephone
 FROM
   cd.members
 WHERE
-  surname ~ '^[aeiouAEIOU]';
+  telephone ~ '[()]'
+ORDER BY
+  memid;
 ```
 
 **Question 3: Count of members grouped by first letter of surname**
