@@ -1,6 +1,6 @@
--- =============================================================================
+-- 
 -- Modifying Data
--- =============================================================================
+-- 
 
 -- Insert a new facility
 INSERT INTO cd.facilities
@@ -15,15 +15,16 @@ SELECT
   (SELECT MAX(facid) FROM cd.facilities) + 1,
   'Spa', 20, 30, 100000, 800;
 
--- Update a member's telephone number
-UPDATE cd.members
-SET telephone = '(555) 555-5555'
-WHERE memid = 0;
-
--- Update guest cost with a 10% increase for tennis courts
+-- Fix the initial outlay for the second tennis court
 UPDATE cd.facilities
-SET guestcost = guestcost * 1.1
-WHERE facid IN (0, 1);
+SET initialoutlay = 10000
+WHERE facid = 1;
+
+-- Increase second tennis court costs by 10% based on first court values
+UPDATE cd.facilities
+SET membercost = (SELECT membercost * 1.1 FROM cd.facilities WHERE facid = 0),
+    guestcost  = (SELECT guestcost  * 1.1 FROM cd.facilities WHERE facid = 0)
+WHERE facid = 1;
 
 -- Delete all bookings
 DELETE FROM cd.bookings;
@@ -33,9 +34,9 @@ DELETE FROM cd.members
 WHERE memid = 37;
 
 
--- =============================================================================
+-- 
 -- Basics
--- =============================================================================
+-- 
 
 -- Facilities where member cost is less than 1/50th of monthly maintenance
 SELECT
@@ -88,50 +89,40 @@ FROM
   cd.facilities;
 
 
--- =============================================================================
+-- 
 -- Joins
--- =============================================================================
+-- 
 
--- Members who have booked a tennis court (name + facility)
+-- Start times for bookings by David Farrell
 SELECT
-  mems.firstname,
-  mems.surname,
-  facs.name AS facility
+  bks.starttime
 FROM
-  cd.members mems
-  JOIN cd.bookings bks ON mems.memid = bks.memid
-  JOIN cd.facilities facs ON bks.facid = facs.facid
+  cd.bookings bks
+  JOIN cd.members mems ON mems.memid = bks.memid
 WHERE
-  facs.name IN ('Tennis Court 1', 'Tennis Court 2');
+  mems.firstname = 'David'
+  AND mems.surname = 'Farrell';
 
--- Bookings on 2012-09-14 where total cost exceeds 30
+-- Start times for tennis court bookings on 2012-09-21
 SELECT
-  mems.firstname || ' ' || mems.surname AS member,
-  facs.name AS facility,
-  CASE
-    WHEN mems.memid = 0 THEN bks.slots * facs.guestcost
-    ELSE bks.slots * facs.membercost
-  END AS cost
+  bks.starttime AS start,
+  facs.name
 FROM
-  cd.members mems
-  JOIN cd.bookings bks ON mems.memid = bks.memid
-  JOIN cd.facilities facs ON bks.facid = facs.facid
+  cd.bookings bks
+  JOIN cd.facilities facs ON facs.facid = bks.facid
 WHERE
-  bks.starttime >= '2012-09-14'
-  AND bks.starttime < '2012-09-15'
-  AND (
-    (mems.memid = 0 AND bks.slots * facs.guestcost > 30)
-    OR (mems.memid != 0 AND bks.slots * facs.membercost > 30)
-  )
+  facs.name IN ('Tennis Court 1', 'Tennis Court 2')
+  AND bks.starttime >= '2012-09-21'
+  AND bks.starttime < '2012-09-22'
 ORDER BY
-  cost DESC;
+  bks.starttime;
 
 -- Each member alongside their recommender using a LEFT JOIN self-join
 SELECT
   mems.firstname AS memfname,
-  mems.surname AS memsname,
+  mems.surname   AS memsname,
   recs.firstname AS recfname,
-  recs.surname AS recsname
+  recs.surname   AS recsname
 FROM
   cd.members mems
   LEFT JOIN cd.members recs ON recs.memid = mems.recommendedby
@@ -150,16 +141,13 @@ ORDER BY
   recs.surname,
   recs.firstname;
 
--- Each member with their recommender name using a correlated subquery
+-- Each member with their recommender using a correlated subquery
 SELECT DISTINCT
   mems.firstname || ' ' || mems.surname AS member,
   (
-    SELECT
-      recs.firstname || ' ' || recs.surname
-    FROM
-      cd.members recs
-    WHERE
-      recs.memid = mems.recommendedby
+    SELECT recs.firstname || ' ' || recs.surname
+    FROM cd.members recs
+    WHERE recs.memid = mems.recommendedby
   ) AS recommender
 FROM
   cd.members mems
@@ -167,9 +155,9 @@ ORDER BY
   member;
 
 
--- =============================================================================
+-- 
 -- Aggregation
--- =============================================================================
+-- 
 
 -- Number of recommendations made by each member
 SELECT
@@ -195,23 +183,21 @@ GROUP BY
 ORDER BY
   facid;
 
--- Total slots booked per facility per month in 2012
+-- Total slots booked per facility in September 2012
 SELECT
   facid,
-  EXTRACT(MONTH FROM starttime) AS month,
   SUM(slots) AS "Total Slots"
 FROM
   cd.bookings
 WHERE
-  EXTRACT(YEAR FROM starttime) = 2012
+  starttime >= '2012-09-01'
+  AND starttime < '2012-10-01'
 GROUP BY
-  facid,
-  month
+  facid
 ORDER BY
-  facid,
-  month;
+  SUM(slots);
 
--- Total slots per facility and month (multi-column group by)
+-- Total slots per facility per month in 2012
 SELECT
   facid,
   EXTRACT(MONTH FROM starttime) AS month,
@@ -234,29 +220,27 @@ SELECT
 FROM
   cd.bookings;
 
--- Members with 3 or more bookings on tennis courts
+-- Each member's name, id, and first booking after 2012-09-01
 SELECT
-  mems.firstname || ' ' || mems.surname AS member,
-  facs.name AS facility,
-  COUNT(*) AS times
+  mems.surname,
+  mems.firstname,
+  mems.memid,
+  MIN(bks.starttime) AS starttime
 FROM
   cd.members mems
   JOIN cd.bookings bks ON mems.memid = bks.memid
-  JOIN cd.facilities facs ON bks.facid = facs.facid
 WHERE
-  facs.name IN ('Tennis Court 1', 'Tennis Court 2')
+  bks.starttime >= '2012-09-01'
 GROUP BY
-  member,
-  facility
-HAVING
-  COUNT(*) >= 3
+  mems.surname,
+  mems.firstname,
+  mems.memid
 ORDER BY
-  member,
-  facility;
+  mems.memid;
 
--- Running total of members using a window function
+-- Total member count in every row using a window function
 SELECT
-  COUNT(*) OVER (ORDER BY joindate) AS count,
+  COUNT(*) OVER () AS count,
   firstname,
   surname
 FROM
@@ -264,7 +248,7 @@ FROM
 ORDER BY
   joindate;
 
--- Row number for each member ordered by join date
+-- Monotonically increasing row number ordered by join date
 SELECT
   ROW_NUMBER() OVER (ORDER BY joindate) AS row_number,
   firstname,
@@ -274,29 +258,27 @@ FROM
 ORDER BY
   joindate;
 
--- Top 3 facilities by total revenue
+-- Facility with the highest number of slots booked, including ties
 SELECT
-  facs.name,
-  SUM(
-    CASE
-      WHEN bks.memid = 0 THEN bks.slots * facs.guestcost
-      ELSE bks.slots * facs.membercost
-    END
-  ) AS revenue
-FROM
-  cd.bookings bks
-  JOIN cd.facilities facs ON bks.facid = facs.facid
-GROUP BY
-  facs.name
-ORDER BY
-  revenue DESC
-LIMIT
-  3;
+  facid,
+  total
+FROM (
+  SELECT
+    facid,
+    SUM(slots) AS total,
+    RANK() OVER (ORDER BY SUM(slots) DESC) AS rank
+  FROM
+    cd.bookings
+  GROUP BY
+    facid
+) ranked
+WHERE
+  rank = 1;
 
 
--- =============================================================================
+-- 
 -- String
--- =============================================================================
+-- 
 
 -- Format member name as 'Surname, Firstname'
 SELECT
@@ -304,13 +286,16 @@ SELECT
 FROM
   cd.members;
 
--- Members whose surname starts with a vowel
+-- Members with parentheses in their telephone number
 SELECT
-  *
+  memid,
+  telephone
 FROM
   cd.members
 WHERE
-  surname ~ '^[aeiouAEIOU]';
+  telephone ~ '[()]'
+ORDER BY
+  memid;
 
 -- Count of members grouped by first letter of surname
 SELECT
@@ -322,3 +307,4 @@ GROUP BY
   letter
 ORDER BY
   letter;
+
