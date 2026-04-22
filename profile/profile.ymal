@@ -1,0 +1,68 @@
+name: "Mahmoud Elboghdady"
+github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_MahmoudElboghdady
+
+summary: "Results-driven Business Systems Analyst with hands-on experience in data analytics, BI development, and process optimization. Proven ability to translate business requirements into technical solutions using SQL, Python, and Power BI across real-world industry projects. Adept at working across the full data lifecycle from pipeline development to dashboard delivery. Holds IBM Data Science and DataCamp Power BI certifications, with strong foundations in agile environments and cross-functional collaboration. Actively seeking BSA or data analyst roles where analytical depth and business acumen drive measurable impact."
+
+skills:
+  proficient:
+    - Python/Pandas
+    - SQL/RDBMS
+    - Power BI/DAX
+    - Linux/Bash
+    - Git/GitHub
+  competent:
+    - Docker
+    - PostgreSQL
+    - ETL/Talend
+    - Java/Spring Boot
+    - Agile/Scrum
+  familiar:
+    - Azure
+    - AWS
+    - GCP
+    - Apache Spark/Databricks
+    - Machine Learning/scikit-learn
+
+jarvis_projects:
+  - name: "Linux Cluster Resource Monitoring App"
+    git_url: "/linux_sql"
+    description: "Designed and implemented a Linux cluster monitoring agent on Rocky Linux 9 (GCP) to collect and persist hardware specs and real-time resource usage across cluster nodes. Developed bash scripts (host_info.sh, host_usage.sh) to query system metrics and insert data into a PostgreSQL instance provisioned via Docker. Automated data collection using crontab and validated results through SQL queries for data analytics and capacity planning. Managed the full workflow using Git with feature branching and pull requests."
+  - name: "SQL Analytics"
+    git_url: "https://github.com/jarviscanada/jarvis_data_eng_MahmoudElboghdady"
+    description: ""
+
+highlighted_projects:
+  - name: "Retail Medallion Architecture Pipeline"
+    git_url:
+    description: "Architected and implemented a Bronze-Silver-Gold Medallion data pipeline on Databricks using Delta Lake during a Jarvis team hackathon. Ingested raw retail transaction data, applied transformations across layers, and delivered Gold-layer sales performance analysis with store-level profit margin findings using PySpark and SQL."
+
+professional_experience:
+  - title: "Business Systems Analyst"
+    company: "Jarvis"
+    duration: "2026-present"
+    description: "Completing structured BSA and data engineering projects in an agile team environment, including a Linux cluster monitoring agent, SQL analytics, and a Databricks Medallion Architecture pipeline. Collaborating with senior developers through code reviews and pull requests, applying industry best practices in bash scripting, PostgreSQL, Docker, and Git workflows."
+  - title: "Machine Learning and Generative AI Engineer"
+    company: "Sheridan Centre for Applied AI"
+    duration: "2026-present"
+    description: "Conducting applied research in machine learning and generative AI at Sheridan's Centre for Applied AI. Contributing to model development, experimentation, and evaluation workflows in a research-focused environment."
+  - title: "Business Intelligence Analyst"
+    company: "Desert Suspension"
+    duration: "2025-2026"
+    description: "Developed and maintained Power BI dashboards and reports to support operational and financial decision-making. Wrote SQL queries and built ETL processes to consolidate data from multiple sources, enabling consistent and reliable reporting across business units."
+
+education:
+  - school_name: "Sheridan College"
+    duration: "2024-present"
+    degree: "Advanced Diploma"
+    department: "Information Systems Engineering"
+      - "GPA: 3.7/4.0"
+  - school_name: "University of Alexandria"
+    duration: "2015-2029"
+    degree: "Bachelor of Science"
+    department: "Hotel Management"
+
+others:
+  - title: "Certificates"
+    bullets:
+      - "IBM Data Science Professional Certificate"
+      - "DataCamp Power BI Data Analyst Certificate"
