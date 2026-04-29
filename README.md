@@ -1,6 +1,6 @@
 # Mahmoud Elboghdady . Jarvis Consulting
 
-Business Intelligence Analyst with 3+ years of experience turning operational complexity into measurable business outcomes. Grounded in business fundamentals from a Hospitality Management degree and sharpened through Information Systems engineering alongside hands-on delivery at Desert Suspension, where I served as the primary data analyst across Sales, Marketing, and executive leadership at three international facilities. Identified reporting inefficiencies and built the solution end-to-end: Automated ETL workflows in Python and SQL cut manual reporting cycles by 75%, a centralized data warehouse eliminated cross-departmental silos, and statistical inventory models achieved 85% forecasting accuracy, contributing directly to a 17% net profit increase.
+I'm a Business Intelligence Analyst with 3+ years of experience turning operational complexity into measurable business outcomes. Grounded in business fundamentals from a Hospitality Management degree and sharpened through an Information Systems engineering diploma alongside hands-on delivery at Desert Suspension (an authorized 4x4 vehicle equipment dealer operating across Saudi Arabia), where I served as the primary data analyst across Sales, Marketing, and executive leadership, delivering end-to-end data solutions that drove significant improvements in reporting efficiency, inventory accuracy, and profitability.
 
 ## Skills
 
@@ -8,14 +8,14 @@ Business Intelligence Analyst with 3+ years of experience turning operational co
 
 **Competent:** UML/System Design, Docker, ETL Pipeline Development, Linux/Bash, Java/Spring Boot
 
-**Familiar:** Apache Spark/Databricks, Tableau, Kubernetes, React, UI/UX
+**Familiar:** Spark/Databricks, Tableau, Kubernetes, React, UI/UX
 
 ## Jarvis Projects
 
 Project source code: [https://github.com/jarviscanada/jarvis_data_eng_MahmoudElboghdady](https://github.com/jarviscanada/jarvis_data_eng_MahmoudElboghdady)
 
 
-**Linux Cluster Resource Monitoring System** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_MahmoudElboghdady/tree/master/linux_sql)]: Designed and deployed a Linux cluster monitoring agent on Rocky Linux 9 (GCP) to give administrators real-time visibility into CPU, memory, and disk usage across distributed nodes, supporting informed decisions around resource allocation and capacity planning. Built two Bash scripts using vmstat and df to collect hardware specs and live usage metrics, persisting data into a centralized PostgreSQL instance containerized via Docker. Automated metric collection with crontab and validated end-to-end pipeline accuracy through SQL-based analysis.
+**Linux Cluster Resource Monitoring System** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_MahmoudElboghdady/tree/master/linux_sql)]: Designed and deployed a Linux cluster monitoring agent on Rocky Linux 9 (GCP) to give administrators real-time visibility into CPU, memory, and disk usage across distributed nodes, supporting informed decisions around resource allocation and capacity planning. Built two Bash scripts to collect hardware specs and live usage metrics, persisting data into a centralized PostgreSQL instance containerized via Docker. Automated metric collection with crontab and validated end-to-end pipeline accuracy through SQL-based analysis.
 
 
 ## Highlighted Projects
@@ -45,4 +45,4 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_MahmoudElb
 - Accenture Data Analytics Job Simulation
 - Competitive athlete across multiple disciplines: started as a competitive swimmer, progressed to men's physique bodybuilding, and competed in CrossFit team events across the Middle East (Saudi Arabia and Bahrain).
 - Currently focused on staying active and healthy as a new father, training to keep up with my daughter as she grows.
-- Content creator with over 300k followers covering Canadian immigration topics, licensing process for foreign-trained (physicians, dentists, pharmacists, and engineers) by interviewing Licensed fellows who went through the journey who completed the process and share their experience to guide others.
+- Content creator  with over 300k followers covering Canadian immigration topics, license  process for foreign-trained professionals by interviewing Licensed fellows who went through the journey and are now ready to pay it back to the community.

@@ -20,11 +20,8 @@ skills:
     - Linux/Bash
     - Java/Spring Boot
   familiar:
-    - Spark/Databricks
+    - Apache Spark/Databricks
     - Tableau
-    - Kubernetes
-    - React
-    - UI/UX
 
 jarvis_projects:
   - name: "Linux Cluster Resource Monitoring System"
