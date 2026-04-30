@@ -49,7 +49,7 @@ The pipeline is intentionally lightweight - it is a PoC, not a production system
 
 **Architecture Diagram**
 
-![Project Architecture](architecture.png)
+![Architecture](architecture.png)
 
 ---
 
@@ -57,7 +57,7 @@ The pipeline is intentionally lightweight - it is a PoC, not a production system
 
 All wrangling and analytical code lives in the notebook:
 
-**[Retail Data Analytics & Wrangling Notebook](./retail_data_analytics_wrangling.ipynb)**
+**[Retail Data Analytics & Wrangling Notebook](./retail_data_wrangling.ipynb)**
 
 The notebook is organised top-down so a fresh kernel can run it end-to-end. The work it performs:
 
