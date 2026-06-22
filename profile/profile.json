@@ -25,12 +25,17 @@
   ],
   "jarvis_projects": [
     {
+      "description": "Led requirements elicitation for an automated Monthly Performance Reporting dashboard for RBC Global Asset Management, replacing a manual ~25-hour, five-system process that had produced an executive-facing data error. Ran a structured interview with the sponsoring Managing Director and routed current-state and technical questions to the data analyst and development lead, then authored a complete 13-section Business Requirements Document with testable functional and non-functional requirements (Given/When/Then), MoSCoW prioritisation, a RACI matrix, dependency and risk registers, and a burn-down tracker. Managed scope through formal change control (deferring a CFO real-time-feed request to a later phase), logged unresolved dependencies with owners and recommended options (including a broken vendor API and a direct-database compliance review), and delivered a 10-minute executive briefing recommending sign-off within the governance cycle.",
+      "git_url": "/bsa_gam",
+      "name": "RBC GAM Monthly Reporting Dashboard - Business Requirements Document."
+    },
+    {
       "description": "Designed and deployed a Linux cluster monitoring agent on Rocky Linux 9 (GCP) to give administrators real-time visibility into CPU, memory, and disk usage across distributed nodes, supporting informed decisions around resource allocation and capacity planning. Built two Bash scripts to collect hardware specs and live usage metrics, persisting data into a centralized PostgreSQL instance containerized via Docker. Automated metric collection with crontab and validated end-to-end pipeline accuracy through SQL-based analysis.",
       "git_url": "/linux_sql",
       "name": "Linux Cluster Resource Monitoring System."
     },
     {
-      "description": "Conducted stakeholder elicitation to author a comprehensive Software Requirements Document (SRD) for a full-stack web and mobile retail self-directed trading application commissioned by a Canadian bank. Structured, clear functional boundaries (FRs) managing complex, atomic multi-account portfolios (TFSA, RRSP, Cash Accounts), strict buy/sell trade constraints, and 5-minute interval third-party Market Data API integration flows[cite: 960, 966, 979, 989, 1008]. Engineered robust non-functional requirements targeting high security, system availability, and data integrity parameters for an expected launch volume of 150,000 to 200,000 active clients.",
+      "description": "Conducted stakeholder elicitation to author a comprehensive Software Requirements Document (SRD) for a full-stack web and mobile retail self-directed trading application commissioned by a Canadian bank. Structured, clear functional boundaries (FRs) managing complex, atomic multi-account portfolios (TFSA, RRSP, Cash Accounts), strict buy/sell trade constraints, and 5-minute interval third-party Market Data API integration flows. Engineered robust non-functional requirements targeting high security, system availability, and data integrity parameters for an expected launch volume of 150,000 to 200,000 active clients.",
       "git_url": "/bsa_stock_trading",
       "name": "Retail Stock Trading Platform Software Requirements Specification."
     },
@@ -55,7 +60,7 @@
       "bullets": [
         "Competitive athlete across multiple disciplines: started as a competitive swimmer, progressed to men's physique bodybuilding, and competed in CrossFit team events across the Middle East (Saudi Arabia and Bahrain).",
         "Currently focused on staying active and healthy as a new father, training to keep up with my daughter as she grows.",
-        "Content creator  with over 300k followers covering Canadian immigration topics, license  process for foreign-trained professionals by interviewing Licensed fellows who went through the journey and are now ready to pay it back to the community."
+        "Content creator with over 300k followers covering Canadian immigration topics and the licensing process for foreign-trained professionals, interviewing licensed professionals who completed the journey and now give back to the community."
       ],
       "title": "Miscellaneous"
     }
@@ -69,7 +74,7 @@
     },
     {
       "company": "Jarvis",
-      "description": "Delivering BSA and data projects in an agile, sprint-based environment with structured code reviews and daily standups. Built a Linux cluster monitoring agent using Bash, PostgreSQL, and Docker to automate resource metric collection across a distributed environment.",
+      "description": "Delivering BSA and data projects in an agile, sprint-based environment with structured code reviews and daily standups. Authored a 13-section Business Requirements Document for an RBC Global Asset Management reporting dashboard, leading stakeholder elicitation, change control, and risk and dependency management. Built a Linux cluster monitoring agent using Bash, PostgreSQL, and Docker to automate resource metric collection across a distributed environment.",
       "duration": "04/2026-present",
       "title": "Business Analyst Consultant"
     },
@@ -89,10 +94,11 @@
   "skills": {
     "competent": [
       "UML/System Design",
+      "Java/Spring Boot",
+      "SDLC",
       "Docker",
       "ETL Pipeline Development",
-      "Linux/Bash",
-      "Java/Spring Boot"
+      "Linux/Bash"
     ],
     "familiar": [
       "Spark/Databricks",
@@ -102,15 +108,17 @@
       "UI/UX"
     ],
     "proficient": [
-      "Python",
-      "Machine Learning (scikit-learn, tensorflow, PyTorch)",
-      "Data Analysis (Pandas, Numpy)",
       "SQL/RDBMS (PostgreSQL, SQL Server, Oracle)",
+      "Requirements Elicitation \u0026 BRD/User Stories",
+      "Stakeholder Management",
+      "Agile/Scrum (planning, standups, retros)",
+      "Python",
+      "Data Analysis (Pandas, Numpy)",
       "Power BI/DAX",
-      "Agile/Scrum",
+      "Machine Learning (scikit-learn, tensorflow, PyTorch)",
       "GCP/AWS",
       "Git/GitHub"
     ]
   },
-  "summary": "I'm a Business Systems Analyst with 3+ years of experience turning operational complexity into measurable business outcomes. Grounded in business fundamentals from a Hospitality Management degree and sharpened through an Information Systems engineering diploma alongside hands-on delivery at Desert Suspension (an authorized 4x4 vehicle equipment dealer operating across Saudi Arabia), where I served as the primary data analyst across Sales, Marketing, and executive leadership, delivering end-to-end data solutions that drove significant improvements in reporting efficiency, inventory accuracy, and profitability."
+  "summary": "I'm a Business Systems Analyst with 3+ years of experience turning operational complexity into measurable business outcomes through requirements elicitation, BRD and user-story authoring, stakeholder management, and Agile delivery. Grounded in business fundamentals from a Hospitality Management degree and sharpened through an Information Systems Engineering diploma alongside hands-on delivery, from authoring a 13-section Business Requirements Document for an RBC Global Asset Management reporting dashboard to serving as the primary data analyst at Desert Suspension (an authorized 4x4 vehicle equipment dealer operating across Saudi Arabia) across Sales, Marketing, and executive leadership, delivering end-to-end data solutions that drove significant improvements in reporting efficiency, inventory accuracy, and profitability."
 }
