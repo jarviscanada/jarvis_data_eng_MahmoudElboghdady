@@ -4,3 +4,4 @@ apps/*.tar.gz
 .local/
 *.tar.gz
 *.jar
+*.swp
