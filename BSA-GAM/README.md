@@ -18,7 +18,7 @@ As the BSA, I owned requirements end to end:
 
 ## Deliverables
 
-- [Business Requirements Document (v0.1)](./BRD_RBC_GAM_Monthly_Reporting_Dashboard.docx)
+- [Business Requirements Document (v0.1)](./BRD_RBC_GAM_Monthly_Reporting_Dashboard.pdf)
 - [Stakeholder Presentation](./Stakeholder_Presentation_RBC_GAM.pptx)
 
 ## Target Outcomes
