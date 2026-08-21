@@ -93,14 +93,6 @@ PySpark patterns used in the two pipelines above.
 
 ---
 
-## Zeppelin and Hadoop Implementation
-
-Not applicable for this project - the analytics work described above was completed entirely on
-Databricks (Spark) against Azure-hosted data, so there is no Zeppelin/GCP/Hadoop component to
-document here.
-
----
-
 ## Future Improvement
 
 1. **Automate and schedule both pipelines end-to-end.** The ETL notebooks currently run manually
