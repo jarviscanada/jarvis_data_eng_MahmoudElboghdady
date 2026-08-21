@@ -5,3 +5,4 @@ apps/*.tar.gz
 *.tar.gz
 *.jar
 *.swp
+.DS_Store
