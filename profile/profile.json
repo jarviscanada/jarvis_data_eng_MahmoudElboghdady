@@ -43,6 +43,11 @@
       "description": "Developed a Python-based Proof of Concept analytics pipeline inside Docker to convert 1.07 million rows of raw historical transaction data from a PostgreSQL database into actionable marketing intelligence. Built clean, top-down Jupyter Notebook pipelines executing data wrangling, string normalization, snake_case table mappings, and strict split tracking for placed versus cancelled orders to insulate revenue reporting. Engineered custom Recency, Frequency, and Monetary (RFM) features to categorize the customer base into distinct, operational clusters (e.g., Champions, At Risk, Hibernating). Delivered a high-level executive presentation featuring professional Seaborn and Matplotlib visualizations mapping month-over-month growth patterns and demand peaks to guide seasonal stock optimization.",
       "git_url": "/python_data_analytics",
       "name": "Retail Data Analytics \u0026 Customer Segmentation Pipeline."
+    },
+    {
+      "description": "Built two independent PySpark pipelines on Databricks to contrast batch and streaming lakehouse design patterns. Engineered a bronze/silver/gold medallion ETL pipeline over a 13.3-million-row credit card transaction dataset sourced from Azure Data Lake Storage Gen2, cleaning and typing raw records in Silver and rolling them into Gold fraud-analytics tables (fraud rate by day, time of day, merchant category, and user) queryable through Unity Catalog. Built a companion Delta Live Tables pipeline that ingests live market data from the Alpha Vantage REST API into a Databricks Volumes landing zone, then declares an incremental bronze/silver/gold table chain with Auto Loader (cloudFiles) for streaming, checkpointed processing. Documented both pipelines with an architecture diagram and dataset/table-level breakdowns for handoff.",
+      "git_url": "/Databricks",
+      "name": "Databricks Lakehouse ETL \u0026 Streaming Analytics Pipelines."
     }
   ],
   "name": "Mahmoud Elboghdady",
@@ -98,10 +103,11 @@
       "SDLC",
       "Docker",
       "ETL Pipeline Development",
-      "Linux/Bash"
+      "Linux/Bash",
+      "Spark/Databricks"
     ],
     "familiar": [
-      "Spark/Databricks",
+      "Azure",
       "Tableau",
       "Kubernetes",
       "React",
