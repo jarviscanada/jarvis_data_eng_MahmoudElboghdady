@@ -6,9 +6,9 @@ I'm a Business Systems Analyst with 3+ years of experience turning operational c
 
 **Proficient:** SQL/RDBMS (PostgreSQL, SQL Server, Oracle), Requirements Elicitation & BRD/User Stories, Stakeholder Management, Agile/Scrum (planning, standups, retros), Python, Data Analysis (Pandas, Numpy), Power BI/DAX, Machine Learning (scikit-learn, tensorflow, PyTorch), GCP/AWS, Git/GitHub
 
-**Competent:** UML/System Design, Java/Spring Boot, SDLC, Docker, ETL Pipeline Development, Linux/Bash, Spark/Databricks
+**Competent:** UML/System Design, Java/Spring Boot, SDLC, Docker, ETL Pipeline Development, Linux/Bash
 
-**Familiar:** Azure, Tableau, Kubernetes, React, UI/UX
+**Familiar:** Spark/Databricks, Tableau, Kubernetes, React, UI/UX
 
 ## Jarvis Projects
 
@@ -22,8 +22,6 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_MahmoudElb
 **Retail Stock Trading Platform Software Requirements Specification.** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_MahmoudElboghdady/tree/master/bsa_stock_trading)]: Conducted stakeholder elicitation to author a comprehensive Software Requirements Document (SRD) for a full-stack web and mobile retail self-directed trading application commissioned by a Canadian bank. Structured, clear functional boundaries (FRs) managing complex, atomic multi-account portfolios (TFSA, RRSP, Cash Accounts), strict buy/sell trade constraints, and 5-minute interval third-party Market Data API integration flows. Engineered robust non-functional requirements targeting high security, system availability, and data integrity parameters for an expected launch volume of 150,000 to 200,000 active clients.
 
 **Retail Data Analytics & Customer Segmentation Pipeline.** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_MahmoudElboghdady/tree/master/python_data_analytics)]: Developed a Python-based Proof of Concept analytics pipeline inside Docker to convert 1.07 million rows of raw historical transaction data from a PostgreSQL database into actionable marketing intelligence. Built clean, top-down Jupyter Notebook pipelines executing data wrangling, string normalization, snake_case table mappings, and strict split tracking for placed versus cancelled orders to insulate revenue reporting. Engineered custom Recency, Frequency, and Monetary (RFM) features to categorize the customer base into distinct, operational clusters (e.g., Champions, At Risk, Hibernating). Delivered a high-level executive presentation featuring professional Seaborn and Matplotlib visualizations mapping month-over-month growth patterns and demand peaks to guide seasonal stock optimization.
-
-**Databricks Lakehouse ETL & Streaming Analytics Pipelines.** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_MahmoudElboghdady/tree/master/Databricks)]: Built two independent PySpark pipelines on Databricks to contrast batch and streaming lakehouse design patterns. Engineered a bronze/silver/gold medallion ETL pipeline over a 13.3-million-row credit card transaction dataset sourced from Azure Data Lake Storage Gen2, cleaning and typing raw records in Silver and rolling them into Gold fraud-analytics tables (fraud rate by day, time of day, merchant category, and user) queryable through Unity Catalog. Built a companion Delta Live Tables pipeline that ingests live market data from the Alpha Vantage REST API into a Databricks Volumes landing zone, then declares an incremental bronze/silver/gold table chain with Auto Loader (cloudFiles) for streaming, checkpointed processing. Documented both pipelines with an architecture diagram and dataset/table-level breakdowns for handoff.
 
 
 ## Highlighted Projects
