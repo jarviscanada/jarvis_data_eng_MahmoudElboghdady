@@ -1,0 +1,8 @@
+Downloads/
+apps/*.tar.gz
+.cache/
+.local/
+*.tar.gz
+*.jar
+*.swp
+.DS_Store
