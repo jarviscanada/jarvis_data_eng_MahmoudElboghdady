@@ -25,8 +25,13 @@
   ],
   "jarvis_projects": [
     {
+      "description": "Built an end-to-end credit scoring model on the Kaggle Home Credit dataset (307,511 loan applications, 122 columns) joined with credit bureau history, to predict which applicants will have payment difficulties. Fixed placeholder codes and data errors, kept missing-value indicators as features, and engineered affordability, employment and bureau features from one shared module used by both the research notebooks and the production code. Compared Logistic Regression, Random Forest and Gradient Boosting with 5-fold cross-validation and randomized search tuning; the tuned Gradient Boosting model reached 0.771 AUROC (Gini 0.54, KS 0.41) on a 61,503-application holdout, above the 0.72 target. Explained predictions with SHAP and adverse action reasons, set up PSI drift monitoring, kept sex out of the model inputs, and shipped a scikit-learn pipeline that scores raw application rows (0.768 AUROC) with SR 11-7 style model documentation.",
+      "git_url": "/ml_credit_scoring",
+      "name": "Home Credit Default Risk - Credit Scoring Model."
+    },
+    {
       "description": "Led requirements elicitation for an automated Monthly Performance Reporting dashboard for RBC Global Asset Management, replacing a manual ~25-hour, five-system process that had produced an executive-facing data error. Ran a structured interview with the sponsoring Managing Director and routed current-state and technical questions to the data analyst and development lead, then authored a complete 13-section Business Requirements Document with testable functional and non-functional requirements (Given/When/Then), MoSCoW prioritisation, a RACI matrix, dependency and risk registers, and a burn-down tracker. Managed scope through formal change control (deferring a CFO real-time-feed request to a later phase), logged unresolved dependencies with owners and recommended options (including a broken vendor API and a direct-database compliance review), and delivered a 10-minute executive briefing recommending sign-off within the governance cycle.",
-      "git_url": "/bsa_gam",
+      "git_url": "/BSA-GAM",
       "name": "RBC GAM Monthly Reporting Dashboard - Business Requirements Document."
     },
     {
@@ -79,9 +84,9 @@
     },
     {
       "company": "Jarvis",
-      "description": "Delivering BSA and data projects in an agile, sprint-based environment with structured code reviews and daily standups. Authored a 13-section Business Requirements Document for an RBC Global Asset Management reporting dashboard, leading stakeholder elicitation, change control, and risk and dependency management. Built a Linux cluster monitoring agent using Bash, PostgreSQL, and Docker to automate resource metric collection across a distributed environment.",
+      "description": "Delivering BSA and data projects in an agile, sprint-based environment with structured code reviews and daily standups. Authored a 13-section Business Requirements Document for an RBC Global Asset Management reporting dashboard, leading stakeholder elicitation, change control, and risk and dependency management. Built a Linux cluster monitoring agent using Bash, PostgreSQL, and Docker to automate resource metric collection across a distributed environment. Now in the Jarvis Machine Learning stream, where I built an explainable credit scoring model (tuned Gradient Boosting, 0.771 AUROC) with SHAP explanations, PSI monitoring and a production scikit-learn pipeline.",
       "duration": "04/2026-present",
-      "title": "Business Analyst Consultant"
+      "title": "Business Systems Analyst"
     },
     {
       "company": "Desert Suspension",
@@ -103,6 +108,7 @@
       "SDLC",
       "Docker",
       "ETL Pipeline Development",
+      "Model Explainability \u0026 Monitoring (SHAP, PSI)",
       "Linux/Bash",
       "Spark/Databricks"
     ],
@@ -126,5 +132,5 @@
       "Git/GitHub"
     ]
   },
-  "summary": "I'm a Business Systems Analyst with 3+ years of experience turning operational complexity into measurable business outcomes through requirements elicitation, BRD and user-story authoring, stakeholder management, and Agile delivery. Grounded in business fundamentals from a Hospitality Management degree and sharpened through an Information Systems Engineering diploma alongside hands-on delivery, from authoring a 13-section Business Requirements Document for an RBC Global Asset Management reporting dashboard to serving as the primary data analyst at Desert Suspension (an authorized 4x4 vehicle equipment dealer operating across Saudi Arabia) across Sales, Marketing, and executive leadership, delivering end-to-end data solutions that drove significant improvements in reporting efficiency, inventory accuracy, and profitability."
+  "summary": "I'm a Business Systems Analyst moving into machine learning engineering through the Jarvis ML stream, with 3+ years of experience turning operational complexity into measurable business outcomes through requirements elicitation, BRD and user-story authoring, stakeholder management, and Agile delivery. Grounded in business fundamentals from a Hospitality Management degree and sharpened through an Information Systems Engineering diploma alongside hands-on delivery, from authoring a 13-section Business Requirements Document for an RBC Global Asset Management reporting dashboard and building an explainable credit scoring model, to serving as the primary data analyst at Desert Suspension (an authorized 4x4 vehicle equipment dealer operating across Saudi Arabia) across Sales, Marketing, and executive leadership, delivering end-to-end data solutions that drove significant improvements in reporting efficiency, inventory accuracy, and profitability."
 }
