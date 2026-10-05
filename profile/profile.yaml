@@ -1,6 +1,6 @@
 name: "Mahmoud Elboghdady"
 github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_MahmoudElboghdady
-summary: "I'm a Business Systems Analyst with 3+ years of experience turning operational complexity into measurable business outcomes through requirements elicitation, BRD and user-story authoring, stakeholder management, and Agile delivery. Grounded in business fundamentals from a Hospitality Management degree and sharpened through an Information Systems Engineering diploma alongside hands-on delivery, from authoring a 13-section Business Requirements Document for an RBC Global Asset Management reporting dashboard to serving as the primary data analyst at Desert Suspension (an authorized 4x4 vehicle equipment dealer operating across Saudi Arabia) across Sales, Marketing, and executive leadership, delivering end-to-end data solutions that drove significant improvements in reporting efficiency, inventory accuracy, and profitability."
+summary: "I'm a Business Systems Analyst moving into machine learning engineering through the Jarvis ML stream, with 3+ years of experience turning operational complexity into measurable business outcomes through requirements elicitation, BRD and user-story authoring, stakeholder management, and Agile delivery. Grounded in business fundamentals from a Hospitality Management degree and sharpened through an Information Systems Engineering diploma alongside hands-on delivery, from authoring a 13-section Business Requirements Document for an RBC Global Asset Management reporting dashboard and building an explainable credit scoring model, to serving as the primary data analyst at Desert Suspension (an authorized 4x4 vehicle equipment dealer operating across Saudi Arabia) across Sales, Marketing, and executive leadership, delivering end-to-end data solutions that drove significant improvements in reporting efficiency, inventory accuracy, and profitability."
 skills:
   proficient:
     - SQL/RDBMS (PostgreSQL, SQL Server, Oracle)
@@ -19,6 +19,7 @@ skills:
     - SDLC
     - Docker
     - ETL Pipeline Development
+    - Model Explainability & Monitoring (SHAP, PSI)
     - Linux/Bash
     - Spark/Databricks
   familiar:
@@ -28,8 +29,11 @@ skills:
     - React
     - UI/UX
 jarvis_projects:
+  - name: "Home Credit Default Risk - Credit Scoring Model."
+    git_url: "/ml_credit_scoring"
+    description: "Built an end-to-end credit scoring model on the Kaggle Home Credit dataset (307,511 loan applications, 122 columns) joined with credit bureau history, to predict which applicants will have payment difficulties. Fixed placeholder codes and data errors, kept missing-value indicators as features, and engineered affordability, employment and bureau features from one shared module used by both the research notebooks and the production code. Compared Logistic Regression, Random Forest and Gradient Boosting with 5-fold cross-validation and randomized search tuning; the tuned Gradient Boosting model reached 0.771 AUROC (Gini 0.54, KS 0.41) on a 61,503-application holdout, above the 0.72 target. Explained predictions with SHAP and adverse action reasons, set up PSI drift monitoring, kept sex out of the model inputs, and shipped a scikit-learn pipeline that scores raw application rows (0.768 AUROC) with SR 11-7 style model documentation."
   - name: "RBC GAM Monthly Reporting Dashboard - Business Requirements Document."
-    git_url: "/bsa_gam"
+    git_url: "/BSA-GAM"
     description: "Led requirements elicitation for an automated Monthly Performance Reporting dashboard for RBC Global Asset Management, replacing a manual ~25-hour, five-system process that had produced an executive-facing data error. Ran a structured interview with the sponsoring Managing Director and routed current-state and technical questions to the data analyst and development lead, then authored a complete 13-section Business Requirements Document with testable functional and non-functional requirements (Given/When/Then), MoSCoW prioritisation, a RACI matrix, dependency and risk registers, and a burn-down tracker. Managed scope through formal change control (deferring a CFO real-time-feed request to a later phase), logged unresolved dependencies with owners and recommended options (including a broken vendor API and a direct-database compliance review), and delivered a 10-minute executive briefing recommending sign-off within the governance cycle."
   - name: "Linux Cluster Resource Monitoring System."
     git_url: "/linux_sql"
@@ -52,10 +56,10 @@ professional_experience:
     company: "Sheridan College - Centre for Applied AI (CAAI)"
     duration: "05/2026-present"
     description: "Translate high-level academic and enterprise research objectives into detailed software specifications, feasibility assessments, and software architecture designs. Design and prototype deep machine learning approaches utilizing encoder-decoder neural network architectures and context-aware patterns to resolve indoor localization resolution and signal reliability barriers. Evaluate third-party models and open-source frameworks against strict performance requirements to champion data-driven build-versus-buy infrastructure decisions."
-  - title: "Business Analyst Consultant"
+  - title: "Business Systems Analyst"
     company: "Jarvis"
     duration: "04/2026-present"
-    description: "Delivering BSA and data projects in an agile, sprint-based environment with structured code reviews and daily standups. Authored a 13-section Business Requirements Document for an RBC Global Asset Management reporting dashboard, leading stakeholder elicitation, change control, and risk and dependency management. Built a Linux cluster monitoring agent using Bash, PostgreSQL, and Docker to automate resource metric collection across a distributed environment."
+    description: "Delivering BSA and data projects in an agile, sprint-based environment with structured code reviews and daily standups. Authored a 13-section Business Requirements Document for an RBC Global Asset Management reporting dashboard, leading stakeholder elicitation, change control, and risk and dependency management. Built a Linux cluster monitoring agent using Bash, PostgreSQL, and Docker to automate resource metric collection across a distributed environment. Now in the Jarvis Machine Learning stream, where I built an explainable credit scoring model (tuned Gradient Boosting, 0.771 AUROC) with SHAP explanations, PSI monitoring and a production scikit-learn pipeline."
   - title: "Business Intelligence Analyst"
     company: "Desert Suspension"
     duration: "08/2024-03/2026"

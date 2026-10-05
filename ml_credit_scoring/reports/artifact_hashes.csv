@@ -1,0 +1,3 @@
+artifact,sha256
+data/application_train.csv,52e96b895b1112e1c853f670e58372719c8441c5ed1c57ac2f7fad559d784f5f
+models/credit_scoring_pipeline.pkl,81789d80e479dfd85a356a609de12ca946997dd6624486119fbc65a5b9ed4456
